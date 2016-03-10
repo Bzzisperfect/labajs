@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="main.css">
+	<script type="text/javascript">
+	 function valid (form) {
+		 var fail=false;
+		 var name=form.name.value;
+		 var password=form.password.value;
+		 var Repassword=form.Repassword.value;
+		 if(name=="" || name =="")
+			 fail="Вы не ввели свое имя";
+		 else if(password == "")
+			 fail="Вы не ввели пароль";
+		 else if(password != Repassword)
+			 fail ="Пароли не совпадают";
+		 if(fail)
+			 alert(fail);
+		 else
+			 window.location="http://google.com";
+		 
+	 }
+	</script>
+</head>
+<body>
+<form action="" method="post" name="test" id="form">
+<label for="name">Имя</label>	
+<input type="text" name="name" placeholder="имя" id="name"/>
+<label for="password">Пароль</label>
+<input type="password" name="password" placeholder="пароль" id="password"/>	
+<label for="Repassword">Проверка пароля</label>
+<input type="password" name="Repassword" placeholder="Введите пароль" id="Repassword"/>		
+<input type="button" onclick="valid(document.getElementById('form'))" name="submit"	value="Готово"/>	 
+</form>
+	<script src="common.js"></script>
+</body>
+</html>
